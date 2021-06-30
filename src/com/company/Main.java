@@ -2,11 +2,11 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("in main");
         MenuItem itemOne = new MenuItem(14.99, "hamburger", "Entree");
 //        System.out.println(itemOne.getDescription());
 //        System.out.println(itemOne.getPrice());
@@ -19,15 +19,22 @@ public class Main {
 //        System.out.println(itemTwo.isNew());
 
         Menu restaurantMenuOne = new Menu();
-        System.out.println(restaurantMenuOne);
-        System.out.println(restaurantMenuOne.getLastUpdated());
-        System.out.println(restaurantMenuOne.getMenuItems());
+//        System.out.println(restaurantMenuOne);
+//        System.out.println(restaurantMenuOne.getLastUpdated());
+//        System.out.println(restaurantMenuOne.getMenuItems());
 
         Menu restaurantMenuTwo = new Menu(new ArrayList<MenuItem>(Arrays.asList(itemOne, itemTwo)));
-        System.out.println(restaurantMenuTwo);
-        System.out.println(restaurantMenuTwo.getLastUpdated());
+//        System.out.println(restaurantMenuTwo);
+//        System.out.println(restaurantMenuTwo.getLastUpdated());
         System.out.println(restaurantMenuTwo.getMenuItems());
 
         // i didn't test out my setters, but feel free!
+
+
+        // looking at MenuItem.toString()
+        System.out.println(itemOne);
+
+        // looking at Menu.toString()
+        System.out.println(restaurantMenuOne);
     }
 }

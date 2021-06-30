@@ -47,4 +47,8 @@ public class MenuItem {
     public void setNew(boolean isNew) {
         this.isNew = isNew;
     }
+
+    public String toString() {
+        return "MenuItem { description: " + this.description + " price: " + this.price + "}";
+    }
 }

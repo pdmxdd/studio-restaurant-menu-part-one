@@ -31,4 +31,8 @@ public class Menu {
     }
 
     // no setters --- as of now I don't think there is any reason to overwrite the properties
+
+    public String toString() {
+        return "Menu { lastUpdated: " + this.lastUpdated + " MenuItems: " + "MenuItems[]" + " }";
+    }
 }
