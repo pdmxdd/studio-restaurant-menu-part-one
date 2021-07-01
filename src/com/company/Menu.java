@@ -30,5 +30,38 @@ public class Menu {
         return menuItems;
     }
 
-    // no setters --- as of now I don't think there is any reason to overwrite the properties
+    // add a way to add AND remove menu items from the menu
+    public void addMenuItem(MenuItem item) {
+        this.menuItems.add(item);
+    }
+
+    public void removeMenuItem(MenuItem item) {
+        this.menuItems.remove(item);
+    }
+
+    public void printFullMenu() {
+        System.out.println("Full Menu:");
+        int i = 1;
+        for(MenuItem item : menuItems) {
+            System.out.println(i + ". " + item);
+            i++;
+        }
+    }
+
+    public MenuItem getMenuItem(int menuIndex) {
+        if(!(menuIndex < this.menuItems.size())) {
+            return new MenuItem(4.04, "Item not found", "NA");
+        }
+        return this.menuItems.get(menuIndex);
+    }
+
+    public ArrayList<MenuItem> getNewMenuItems() {
+        ArrayList<MenuItem> newItems = new ArrayList<>();
+        for(MenuItem item : menuItems) {
+            if(item.isNew()) {
+                newItems.add(item);
+            }
+        }
+        return newItems;
+    }
 }

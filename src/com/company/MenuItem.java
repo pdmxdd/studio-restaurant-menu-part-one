@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class MenuItem {
     private double price;
     private String description;
@@ -46,5 +48,28 @@ public class MenuItem {
     // setter for isNew
     public void setNew(boolean isNew) {
         this.isNew = isNew;
+    }
+
+    @Override
+    public String toString() {
+        return "MenuItem{" +
+                "price=" + price +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", isNew=" + isNew +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MenuItem menuItem = (MenuItem) o;
+        return Double.compare(menuItem.price, price) == 0 && description.equals(menuItem.description) && Objects.equals(category, menuItem.category);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(price, description, category);
     }
 }
