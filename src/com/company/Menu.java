@@ -21,6 +21,7 @@ public class Menu {
     }
 
     // getter for .lastUpdated
+    // studio 2 part 3
     public Date getLastUpdated() {
         return lastUpdated;
     }
@@ -31,6 +32,7 @@ public class Menu {
     }
 
     // add a way to add AND remove menu items from the menu
+    // studio 2 part 1
     public void addMenuItem(MenuItem item) {
         this.menuItems.add(item);
     }
@@ -39,6 +41,7 @@ public class Menu {
         this.menuItems.remove(item);
     }
 
+    // studio 2 part 4
     public void printFullMenu() {
         System.out.println("Full Menu:");
         int i = 1;
@@ -48,6 +51,7 @@ public class Menu {
         }
     }
 
+    // studio 2 part 4
     public MenuItem getMenuItem(int menuIndex) {
         if(!(menuIndex < this.menuItems.size())) {
             return new MenuItem(4.04, "Item not found", "NA");

@@ -31,6 +31,7 @@ public class MenuItem {
     }
 
     // getter for .isNew --> notice the syntax is a little different I didn't use getIsNew() -> just isNew() makes sense as it can only return either true or false
+    // studio 2 part 2
     public boolean isNew() {
         return isNew;
     }
@@ -60,6 +61,7 @@ public class MenuItem {
                 '}';
     }
 
+    // studio 2 part 5
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -68,6 +70,7 @@ public class MenuItem {
         return Double.compare(menuItem.price, price) == 0 && description.equals(menuItem.description) && Objects.equals(category, menuItem.category);
     }
 
+    // studio 2 part 5
     @Override
     public int hashCode() {
         return Objects.hash(price, description, category);
